@@ -96,5 +96,5 @@ jobs:
         #run: aws s3 cp ${{ github.sha }}.zip s3://<YOUR BUCKET NAME HERE>/${{ github.repository }}/${{ github.sha }}.zip
         run: |
           echo "source: ${{ github.sha }}.zip"
-          echo "destination: s3://<YOUR BUCKET NAME HERE>/${{ github.repository }}/${{ github.sha }}.zip"
+          echo "destination: s3://${{ vars.S3_BUCKET }}/${{ github.repository }}/${{ github.sha }}.zip"
           
