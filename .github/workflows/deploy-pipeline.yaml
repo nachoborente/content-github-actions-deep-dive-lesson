@@ -79,7 +79,7 @@ jobs:
     needs: publish
     steps:
       - name: Download artifact
-        uses: action/download-artifact@v3
+        uses: actions/download-artifact@v3
         with:
             name: zipped-bundle
       - name: Configure Cledentials
