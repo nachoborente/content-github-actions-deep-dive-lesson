@@ -7,9 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: Check out code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
           python-version: 3.8
       - name: Install libraries
@@ -25,9 +25,9 @@ jobs:
     needs: lint
     steps:
       - name: Check out code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v3
         with:
           python-version: 3.8
       - name: Install libraries
@@ -65,7 +65,7 @@ jobs:
         with:
             name: zipped-bundle
       - name: upload release asset
-        uses: actions/upload-release-asset@v3
+        uses: actions/upload-release-asset@v1
         env:
             GITHUB_TOKEN: ${{ secrets.github_token }}
         with:
